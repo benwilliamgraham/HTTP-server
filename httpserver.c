@@ -115,11 +115,11 @@ int serve_get(struct client client, char *request) {
   // open file or send proper message
   FILE *file;
   if ((file = fopen(filename, "r")) == NULL) {
-    fprintf(stderr, "unnable to open file %s\n", filename);
+    fprintf(stderr, "Error: unnable to open file %s\n", filename);
     char *message = "HTTP/1.1 404 Not Found\r\n";
     int messageBytes = strlen(message);
     if (send(client.fd, message, messageBytes, 0) != messageBytes)
-      fprintf(stderr, "unnable to send failure message\n");
+      fprintf(stderr, "Error: unnable to send failure message\n");
     return 0;
   }
 
