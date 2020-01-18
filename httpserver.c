@@ -1,6 +1,6 @@
-// quickhost
+// HTTP server
 //
-// Custom http server
+// Simple HTTP server implemented in C
 //
 // Ben Graham
 // benwilliamgraham@gmail.com
